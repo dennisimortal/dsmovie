@@ -14,12 +14,12 @@ import com.devuperior.dsmovie.services.MovieService;
 @RestController
 @RequestMapping(value = "/movies")
 public class MovieController {
-	
+		
 	@Autowired
 	private MovieService service;
 	
 	@GetMapping
-	public Page<MovieDTO> findall(Pageable pageable){
+	public Page<MovieDTO> findAll(Pageable pageable){
 		return service.findAll(pageable);
 	}
 	
@@ -29,3 +29,5 @@ public class MovieController {
 	}
 
 }
+
+
